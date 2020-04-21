@@ -98,7 +98,7 @@ read.csv("https://github.com/juli2345/julia_zahorodna/ms.detector.media_30_pages
 
 
 ## Зациклюємо. Скачаємо те саме для кожної сторінки
-Адреса сайту  виглядає так: https://ms.detector.media/type/4/?fbclid=IwAR2wylW95gPXcyH2V2U3R_igsRCPYABZFsK2cLaLMDdfKd5cv04eXGCBBAM/pagenum/30/  
+Адреса сайту  виглядає так: https://ms.detector.media/type/4/pagenum/30/  
 `offset=20` це друга сторінка, у третьої оффсет буде 30, у одинадцятої 110 і так далі.
 Отже щоб завантажити дані з однієї сторінки потрібно:
 1. Завантажити її html, підставляючи по ходу цикла різні офсети
@@ -118,7 +118,7 @@ dates <- c()
 titles <- c()
 links <- c()
 
-url_template <- "https://ms.detector.media/type/4/?fbclid=IwAR2wylW95gPXcyH2V2U3R_igsRCPYABZFsK2cLaLMDdfKd5cv04eXGCBBAM/pagenum/"
+url_template <- "https://ms.detector.media/type/4/pagenum/"
 ```
 
 
