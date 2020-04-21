@@ -133,20 +133,20 @@ for (page in 1:npages) {
   
   # Копіпаст коду для першої сторінки
   titles <- content %>%
-    html_nodes('div.page_cats-post [data-column="Title"]') %>%
+    html_nodes('div.cat_blkPostTitle a') %>%
     html_text() %>%
     str_trim() %>%
     c(titles, .)    
   
   dates <- content %>%
-    html_nodes('div.page_cats-post [data-column="Date"]') %>%
+    html_nodes('div.cat_blkPostDate') %>%
     html_text() %>%
     str_trim()  %>%
     c(dates, .)
   
   # ще додамо лінки. Тут вибираємо не текст, а атрибут "href" тега "<a>" — лінк
   links <- content %>%
-    html_nodes('div.page_cats-post [data-column="Title"] a') %>%
+    html_nodes('div.cat_blkPostTitle a') %>%
     html_attr("href") %>%
     c(links, .)
   
