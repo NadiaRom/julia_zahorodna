@@ -127,7 +127,7 @@ url_template <- "https://ms.detector.media/type/4/?fbclid=IwAR2wylW95gPXcyH2V2U3
 for (page in 1:npages) {
   # з'єднуємо рядки: основу url-адреси, № сторінки помножений на 10, бо сторінки йдуть з кроком 10
   url <- str_c(url_template,
-               page * 10)
+               page)
   
   content <- read_html(url)
   
